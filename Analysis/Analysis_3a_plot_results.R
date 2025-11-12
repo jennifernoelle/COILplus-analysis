@@ -174,28 +174,34 @@ op <- sum(comb_A ==1)/length(comb_A)
 (pp75 - op)/op # % increase in interactions at 75% threshold
 (pp50 - op)/op
 
-# Count number of focal studies for each species
-fV <- rowSums(obs_F)
-fP <- apply(obs_F, 2, sum)
+# Count number of focal studies for each vertebrate species
+fV <- apply(obs_F, 1, function(x) {
+  # We sum across plants within each study, then check if > 0
+  study_presence <- colSums(x) > 0
+  sum(study_presence)
+})
 
 # Count number of observed interactions for each species
 aV <- rowSums(comb_A)
-aP <- colSums(comb_A)
 
 # Count the number of high posterior probability interactions for each species
 p75V <- apply(mean_pred, 1, function(x) sum(x > 0.75))
 p50V <- apply(mean_pred, 1, function(x) sum(x > 0.5))
-p75P <- apply(mean_pred, 2, function(x) sum(x > 0.75))
-p50P <- apply(mean_pred, 2, function(x) sum(x > 0.5))
 
 # Make sure they match
 sum(names(fV)!= names(aV))
-sum(names(fP)!= names(aP))
 
 # Look at correlation between study intensity and observed interactions: vertebrates
 cor(fV, aV) # Observed correlation
 cor(fV, p75V) # Correlation with posterior probs, P > 75%
 cor(fV, p50V) # Correlation with posterior probs, P > 50%
+
+# Look at vertebrate species with the most new interactions
+new_df <- data.frame(v_species = names(aV), n_studies = fV, 
+                     obs_int = aV, new_int = p75V,
+                     perc_inc = (p75V - aV)/aV) %>%
+  arrange(-perc_inc, n_studies) 
+
 
 # ----------------- STEP 3: PLOTTING THE HEATMAP ----------------------------#
 
