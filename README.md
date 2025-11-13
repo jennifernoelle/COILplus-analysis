@@ -1,8 +1,8 @@
 # COIL+
 
-This repository implements both the **COIL** model and the extended **COIL+** model developed in XX (2025) and contains all code needed to reproduce the results from the main text. It adds support for informative occurrence priors and sampling of occurrence probabilities, together with major efficiency improvements to the [BiasedNetwork](https://github.com/gpapadog/BiasedNetwork) package Papadogeorgou (2023).
+This repository implements both the **COIL** model and the extended **COIL+** model developed in XX (2025) and contains all code needed to reproduce the results from the main text. It adds support for informative occurrence priors and sampling of occurrence probabilities, together with major efficiency improvements to the [BiasedNetwork](https://github.com/gpapadog/BiasedNetwork) package (Papadogeorgou, 2023).
 
-In this project, we aim to impute missing mammal-plant interactions from a multi-study data set of Afrotropical frugivory. The data are provided with generic species labels for plants and frugivores in compliance with data sharing restrictions.
+The included code provides an illustrative example, imputing unobserved frugivore-plant interactions from a multi-study data set of Afrotropical frugivory. The data are provided with generic species labels for plants and frugivores in compliance with data sharing restrictions.
 
 ## Data set
 
@@ -65,7 +65,5 @@ For replicating the analysis results in this code, you will need to specify a di
 If you use this repository, please cite both XX (2025) and Papdogeourgiou et al. (2023).
 
 # References
-
-XX Removed for anonymous review.
 
 Papadogeorgou, G., Bello, C., Ovaskainen, O., & Dunson, D. B. (2023). Covariate-informed latent interaction models: addressing geographic & taxonomic bias in predicting bird–plant interactions. *Journal of the American Statistical Association*, *118*(544), 2250-2261.
