@@ -14,3 +14,6 @@
 # Processed data and results
 Results/
 ProcessedData/
+
+# Non-anonymized readme
+README_not_anonymous.md
