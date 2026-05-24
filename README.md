@@ -1,4 +1,6 @@
-# COIL+
+# COILplus
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20367778.svg)](https://doi.org/10.5281/zenodo.20367778)
 
 This repository implements both the **COIL** model and the extended **COIL+** model developed in Kampe et al. (2026) and contains all code needed to reproduce the results from the main text. It adds support for informative occurrence priors and sampling of occurrence probabilities, together with major efficiency improvements to the [BiasedNetwork](https://github.com/gpapadog/BiasedNetwork) package Papadogeorgou (2023).
 
