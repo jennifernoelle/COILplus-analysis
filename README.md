@@ -78,6 +78,13 @@ If you use this repository, please cite both Kampe et al. (2025) paper and Papdo
 
 # References
 
-Kampe, J. N., DeSisto, C., & Dunson, D. B. (2026). *Covariate-informed link prediction with extreme taxonomic bias*. arXiv preprint arXiv:2506.23370. [https://arxiv.org/abs/2506.23370](https://arxiv.org/abs/2506.23370?utm_source=chatgpt.com)
+Kampe, J. N., DeSisto, C., & Dunson, D. B. (2025). *Covariate-informed link prediction with extreme taxonomic bias*. arXiv preprint arXiv:2506.23370. [https://arxiv.org/abs/2506.23370](https://arxiv.org/abs/2506.23370?utm_source=chatgpt.com)
+
+
+Kampe, J. (2026). *COILplus: R package for link prediction in ecological meta-networks*. 
+Zenodo. https://doi.org/10.5281/zenodo.20368146
+
+Papadogeorgou, G. (2026). *BiasedNetwork: Latent factor network model with bias correction for unrecorded interactions*. GitHub. https://github.com/gpapadog/BiasedNetwork
 
 Papadogeorgou, G., Bello, C., Ovaskainen, O., & Dunson, D. B. (2023). Covariate-informed latent interaction models: addressing geographic & taxonomic bias in predicting bird–plant interactions. *Journal of the American Statistical Association*, *118*(544), 2250-2261.
+
