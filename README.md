@@ -1,8 +1,14 @@
 # COIL+
 
-This repository implements both the **COIL** model and the extended **COIL+** model developed in XX (2025) and contains all code needed to reproduce the results from the main text. It adds support for informative occurrence priors and sampling of occurrence probabilities, together with major efficiency improvements to the [BiasedNetwork](https://github.com/gpapadog/BiasedNetwork) package (Papadogeorgou, 2023).
+This repository implements both the **COIL** model and the extended **COIL+** model developed in Kampe et al. (2026) and contains all code needed to reproduce the results from the main text. It adds support for informative occurrence priors and sampling of occurrence probabilities, together with major efficiency improvements to the [BiasedNetwork](https://github.com/gpapadog/BiasedNetwork) package Papadogeorgou (2023).
 
-The included code provides an illustrative example, imputing unobserved frugivore-plant interactions from a multi-study data set of Afrotropical frugivory. The data are provided with generic species labels for plants and frugivores in compliance with data sharing restrictions.
+In this project, we aim to impute missing mammal-plant interactions from a multi-study data set of Afrotropical frugivory. The data are provided with generic species labels for plants and frugivores in compliance with data sharing restrictions.
+
+TO DO:
+
+1.  Double check function comments look good enough
+
+2.  Commit functions and new readme
 
 ## Data set
 
@@ -29,7 +35,11 @@ Plant phylogenies are acquired using the `V.PhyloMaker` R package and the phylog
 The code is included in `R_fast/`and `R_legacy/`. The use is as follows:
 
 -   `R_fast/` contains rewritten versions of the most computationally intensive routines (sampling latent factors, updating occurrence indicators and probabilities, computing the log-likelihood, updating stored quantities). These updates are **distributionally equivalent** to the legacy code but avoid explicit matrix inversions, making them both **more numerically accurate** and up to **10× faster**.
+
+<!-- -->
+
 -   `R_legacy/` contains the legacy implementations, preserved to replicate analyses based on earlier versions of the functions.
+
 -   This work builds on and substantially extends the original [BiasedNetwork](https://github.com/gpapadog/BiasedNetwork) repo.
 
 The code for the analysis is in the folder `Analysis/`. The numbers in the beginning of the file names represent the order with which the files should be used/run. In brief the content of each analysis file is as follows:
@@ -62,8 +72,10 @@ For replicating the analysis results in this code, you will need to specify a di
 
 ## Citation
 
-If you use this repository, please cite both XX (2025) and Papdogeourgiou et al. (2023).
+If you use this repository, please cite both Kampe et al. (2025) paper and Papdogeourgiou et al. (2023).
 
 # References
+
+Kampe, J. N., DeSisto, C., & Dunson, D. B. (2026). *Covariate-informed link prediction with extreme taxonomic bias*. arXiv preprint arXiv:2506.23370. [https://arxiv.org/abs/2506.23370](https://arxiv.org/abs/2506.23370?utm_source=chatgpt.com)
 
 Papadogeorgou, G., Bello, C., Ovaskainen, O., & Dunson, D. B. (2023). Covariate-informed latent interaction models: addressing geographic & taxonomic bias in predicting bird–plant interactions. *Journal of the American Statistical Association*, *118*(544), 2250-2261.
